@@ -9,6 +9,9 @@ public class Model {
         this.vmMachine = new VendingMachine();
     }
 
+    public Model() {
+    }
+
     public void setVMStatus(boolean VMStatus) {
         this.vendingMachineCreated = VMStatus;
     }
@@ -20,8 +23,5 @@ public class Model {
     public VendingMachine getVendingMachine() {
         return this.vmMachine;
     }
-
-
-
 
 }

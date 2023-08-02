@@ -15,14 +15,16 @@ public class MainFrame extends JFrame {
         cardLayout = new CardLayout();
         First first = new First();
         VendingVM vendingVM = new VendingVM();
+        MaintenanceVM maintenanceVM = new MaintenanceVM();
 
         // sets our layout as a card layout
         setLayout(cardLayout);
 
-        new VMController(first, vendingVM);
+        new VMController(first, vendingVM, maintenanceVM);
 
         add(first, "Main Menu");
         add(vendingVM, "Vending Features");
+        add(maintenanceVM, "Maintenace Feature");
 
         int FRAME_WIDTH = 1200;
         int FRAME_HEIGHT = 700;
