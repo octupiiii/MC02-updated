@@ -1,7 +1,6 @@
 package View;
 
 import Controller.VMController;
-import View.MaintenanceVM;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,17 +14,15 @@ public class MainFrame extends JFrame {
         super("ICE ICE BaBY");
         cardLayout = new CardLayout();
         First first = new First();
-        MaintenanceVM maintenanceVM = new MaintenanceVM();
         VendingVM vendingVM = new VendingVM();
 
         // sets our layout as a card layout
         setLayout(cardLayout);
 
-        new VMController(first, maintenanceVM, vendingVM);
+        new VMController(first, vendingVM);
 
         add(first, "Main Menu");
-        add(maintenanceVM, "Maintenance");
-        add(vendingVM, "Vending features");
+        add(vendingVM, "Vending Features");
 
         int FRAME_WIDTH = 1200;
         int FRAME_HEIGHT = 700;
