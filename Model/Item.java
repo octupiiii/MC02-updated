@@ -1,3 +1,4 @@
+package Model;
 
 /**
  * Class representing an item object in the Vending Machine.
@@ -52,8 +53,12 @@ public class Item {
      *
      * @param newPrice The new price to set for the item.
      */
-    public void setPrice(float newPrice) {
+    public void setPrice(double newPrice) {
         this.price = newPrice;
+    }
+
+    public void setCalories(double newCalories) {
+        this.calories = newCalories;
     }
 
 }

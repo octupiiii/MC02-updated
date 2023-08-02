@@ -1,3 +1,4 @@
+package Model;
 /**
  * Class representing the money denominations in the Vending Machine.
  */

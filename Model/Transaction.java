@@ -1,3 +1,4 @@
+package Model;
 /**
  * Class representing the transaction summary of the Vending Machine.
  */

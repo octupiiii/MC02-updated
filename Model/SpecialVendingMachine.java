@@ -1,3 +1,4 @@
+package Model;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,9 +68,9 @@ public class SpecialVendingMachine extends VendingMachine {
                     System.out.print("Enter number of items you wish to stock: ");
                     int numStock = scanner.nextInt();
                     restockItem(index, numStock);
-                    System.out.println("Succesfully added " + numStock + itemSlot.get(index).getItem().getName());
-                    System.out.println(itemSlot.get(index).getItem().getName() + " Stock = "
-                            + itemSlot.get(index).getItem().getQuantity());
+                    System.out.println("Succesfully added " + numStock + itemSlot.get(index).getDesignatedItem().getName());
+                    System.out.println(itemSlot.get(index).getDesignatedItem().getName() + " Stock = "
+                            + itemSlot.get(index).getItemQuantity());
                 } else
                     System.out.println("Slot is unoccupied. Choose an occupied slot."); // loop
                 displayStockStocks();
@@ -83,7 +84,7 @@ public class SpecialVendingMachine extends VendingMachine {
                     System.out.print("Enter new price: ");
                     float newPrice = scanner.nextFloat();
 
-                    itemSlot.get(index).getItem().setPrice(newPrice);
+                    itemSlot.get(index).getDesignatedItem().setPrice(newPrice);
                     displaySlotItems();
                 } else
                     System.out.println("Slot is unoccupied. Choose an occupied slot.");
