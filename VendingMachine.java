@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import Model.Slot;
+
 import java.util.Iterator;
 
 /**

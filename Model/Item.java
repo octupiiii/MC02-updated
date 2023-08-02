@@ -1,3 +1,4 @@
+package Model;
 
 /**
  * Class representing an item object in the Vending Machine.

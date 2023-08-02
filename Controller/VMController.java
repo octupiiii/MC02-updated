@@ -2,6 +2,7 @@ package Controller;
 
 import View.First;
 import View.MainFrame;
+import View.VendingVM;
 import Model.Model;
 
 import java.io.File;
@@ -14,8 +15,9 @@ import javax.swing.*;
 public class VMController {
 
     private First first;
+    private VendingVM vendingVM;
 
-    public VMController(First first) {
+    public VMController(First first, VendingVM vendingVM) {
         this.first = first;
         Model model = new Model();
 
@@ -58,11 +60,10 @@ public class VMController {
                             options[0]);
 
                     if (choice == JOptionPane.YES_OPTION) {
-                        System.out.print("VENDING");
-                        model.setVMStatus(true);
+                        first.setVisible(false);
+                        vendingVM.setVisible(true);
                     } else if (choice == JOptionPane.NO_OPTION)
                         System.out.print("MAINTENANCE");
-                    model.setVMStatus(true);
                 } else
                     // Show an error message if the vending machine is not created yet
                     JOptionPane.showMessageDialog(this.first, "Please create a vending machine first!");

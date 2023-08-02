@@ -14,13 +14,15 @@ public class MainFrame extends JFrame {
         super("ICE ICE BaBY");
         cardLayout = new CardLayout();
         First first = new First();
+        VendingVM vendingVM = new VendingVM();
 
         // sets our layout as a card layout
         setLayout(cardLayout);
 
-        new VMController(first);
+        new VMController(first, vendingVM);
 
         add(first, "Main Menu");
+        add(vendingVM, "Vending Features");
 
         int FRAME_WIDTH = 1200;
         int FRAME_HEIGHT = 700;
